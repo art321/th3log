@@ -1,6 +1,6 @@
 {
-    "name": "Th3log",
-    "version": "1.0.0",
+    "name": "Th3log/Logging",
+    "version": "0.0.1",
     "description": "A Modified Simple Logging Class",
     "keywords": ["th3", "log"],
     "require": {
