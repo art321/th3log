@@ -41,7 +41,7 @@ class Logging
         }
 
         if (isset($this->data2)) {
-            $log_data .= '- [' . $data2 . '] ';
+            $log_data .= '- [' . $this->data2 . '] ';
         }
 
         return $log_data .= $log_message;
