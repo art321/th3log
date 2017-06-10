@@ -1,5 +1,7 @@
 <?php
 
+namespace Art321\Th3Log;
+
 class Logging
 {
     private $log_path;
@@ -14,20 +16,20 @@ class Logging
         $prefix = null,
         $data1 = null,
         $data2 = null,
-        $log_level = Psr\Log\LogLevel::INFO
+        $log_level = \Psr\Log\LogLevel::INFO
         ) {
-        $logpath = $this->logpath;
-        $prefix = $this->prefix;
-        $data1 = $this->data1;
-        $data2 = $this->data2;
-        $log_level = $this->log_level;
+        $this->logpath = $logpath;
+        $this->prefix = $prefix;
+        $this->data1 = $data1;
+        $this->data2 = $data2;
+        $this->log_level = $log_level;
     }
 
     /**
      * @param string $log_message
      */
 
-    private function buildLogString(
+    public function buildLogString(
         $log_message = null
     ) {
         if ($log_message === null) {
@@ -52,7 +54,7 @@ class Logging
      * @param string $log_data
      */
 
-    private function switchLogMethod($log_method, $log_data)
+    public function switchLogMethod($log_method, $log_data)
     {
         switch ($log_method) {
             case 'EMERGENCY':
